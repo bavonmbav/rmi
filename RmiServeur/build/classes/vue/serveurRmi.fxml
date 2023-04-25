@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="316.0" style="-fx-background-image: #444654;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.ServeurRmiController">
+   <center>
+      <VBox fx:id="pare" alignment="CENTER" onMouseDragged="#getMouvY" onMouseMoved="#getMovX" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #494c50;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #494c50;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8_vpn_40px.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="ipAdress" fill="#3b7c57" strokeType="OUTSIDE" strokeWidth="0.0" text="IP:">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#4fc9b9" onMouseClicked="#getActiver" strokeType="OUTSIDE" strokeWidth="0.0" text="Activer  ">
+                     <font>
+                        <Font name="Arial" size="27.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#4fc9b9" onMouseClicked="#getdesactiver" strokeType="OUTSIDE" strokeWidth="0.0" text="Desactiver  ">
+                     <font>
+                        <Font name="Arial" size="27.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="14.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #494c50;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imagess" fitHeight="91.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="TOP_RIGHT" onMouseDragged="#getmv" onMouseMoved="#getxv" prefHeight="27.0" prefWidth="316.0" style="-fx-background-color: #444654;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="150.0" onMouseClicked="#Exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8_close_window_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
